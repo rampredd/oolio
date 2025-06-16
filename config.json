@@ -1,0 +1,6 @@
+{
+	"listen_host": "localhost",
+	"port": "8020",
+	"server_name": "oolio",
+	"api_key": "secretkey"
+}
