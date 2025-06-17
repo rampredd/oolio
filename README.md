@@ -12,8 +12,8 @@ Clone repo into GOPATH and run below commands. <br />
 cd oolio <br />
 mkdir coupons <br />
 
-Unzip coupon files and place in below folder (replace GOPATH your local value) <br />
-<GOPATH>/oolio/coupons/ <br />
+Unzip coupon files and place in below folder (replace GOPATH with your local value) <br />
+GOPATH/oolio/coupons/ <br />
 
 # Run app
 Run below commands to setup application and run <br />
