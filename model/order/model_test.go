@@ -13,7 +13,7 @@ func TestValidateCoupon(t *testing.T) {
 	o := Order{CouponCode: "SUPER100"}
 
 	//validate Coupon
-	couponValid := o.ValidateCoupon("SUPER100")
+	couponValid := o.ValidateCoupon()
 	if couponValid {
 		t.Errorf("Expected invalid coupon reponse. Got %v", couponValid)
 	}

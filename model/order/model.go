@@ -63,11 +63,11 @@ func LoadCoupons(location string) error {
 	return nil
 }
 
-func (o *Order) ValidateCoupon(coupon string) bool {
+func (o *Order) ValidateCoupon() bool {
 	keyNames := []string{"c1", "c2", "c3"}
 	findCouponCount := 0
 	for _, k := range keyNames {
-		if _, ok := couponMap[k][coupon]; ok {
+		if _, ok := couponMap[k][o.CouponCode]; ok {
 			findCouponCount += 1
 		}
 	}
@@ -103,6 +103,10 @@ func (o *Order) Save(r OrderReq) error {
 	return nil
 }
 
+/*
+Get list of all orders crearted
+This is added to test POST order API
+*/
 func (o *Order) Get() []Order {
 	return orders
 }

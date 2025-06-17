@@ -24,14 +24,14 @@ func CreateOrder(w http.ResponseWriter, r *http.Request) {
 
 	var req model.OrderReq
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 
 	o := &model.Order{CouponCode: req.CouponCode, Items: req.Items}
 
 	//validate Coupon
-	couponValid := o.ValidateCoupon(req.CouponCode)
+	couponValid := o.ValidateCoupon()
 	if !couponValid {
 		w.WriteHeader(http.StatusUnprocessableEntity)
 		return
