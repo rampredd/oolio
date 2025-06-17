@@ -64,8 +64,14 @@ func LoadCoupons(location string) error {
 }
 
 func (o *Order) ValidateCoupon() bool {
+	//validate length of coupon
+	if len(o.CouponCode) < 8 && len(o.CouponCode) > 10 {
+		return false
+	}
 	keyNames := []string{"c1", "c2", "c3"}
 	findCouponCount := 0
+
+	//check if coupon exists in map
 	for _, k := range keyNames {
 		if _, ok := couponMap[k][o.CouponCode]; ok {
 			findCouponCount += 1
