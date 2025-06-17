@@ -2,10 +2,10 @@
 This is golang backend application to serve PoS APIs as per openapi specification given in this repo.
 
 # List of APIs implemented
-GET api/product to get list of products available
-GET api/product/{productId} to get details of one particular product
-POST api/order to place an order
-GET api/order to get list of orders placed
+GET api/product to get list of products available <br />
+GET api/product/{productId} to get details of one particular product <br />
+POST api/order to place an order <br />
+GET api/order to get list of orders placed <br />
 
 # Begin
 Clone repo into GOPATH and run below commands. <br />
