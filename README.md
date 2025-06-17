@@ -32,3 +32,5 @@ go test model/order/* <br />
 Run below commands in other tab to test REST APIs <br />
 go test api/order/* <br />
 go test api/product/* <br />
+
+Note: backend application should be running in other tab to test APIs <br />
